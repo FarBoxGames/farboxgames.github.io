@@ -1,0 +1,230 @@
+﻿<html lang="ru">
+<head>
+    <title>Колледж</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/Main.js"></script>
+    <script type="text/javascript">
+        var lngTag = "Language";
+        var langsElems = new Array(2);
+        var timeOut = 10;
+        function OnLoadLanguage() {
+            langsElems = new Array(2);
+            langsElems[0] = document.getElementById("ru");
+            langsElems[1] = document.getElementById("kz");
+
+            var xml = XMLDocument.constructor();
+            var saveLng = document.cookie;
+            if (saveLng.length > 0)
+                alert(saveLng = getCookie(lngTag));
+            else {
+                saveLng = getCookie(lngTag) == null ? langsElems[0].id : "";
+            }
+            SetLang(saveLng);
+        }
+
+        function SetLang(lng) {
+            for (var i = 0; i < langsElems.length; i++) {
+                var elem = langsElems[i];
+                elem.className = "class_" + elem.id.toLowerCase() + " " + (elem.id.toLowerCase() != lng.toLowerCase() ? "classLngIsOff" : "classLngIsOn");
+            }
+        }
+
+        function getCookie(name) {
+            var prefix = name + "=";
+            var cookieStartIndex = document.cookie.indexOf(prefix);
+            if (cookieStartIndex == -1)
+                return null;
+            var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length);
+            if (cookieEndIndex == -1)
+                cookieEndIndex = document.cookie.length;
+            return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+        }
+
+        function Reload() {
+            location.reload();
+        }
+
+    </script>
+    <script type="text/javascript" src="js/ImageGroup.js"></script>
+    <script type="text/javascript" src="js/Image View.js"></script>
+</head>
+<body onload="OnLoadLanguage(); BodyLoaded(); InitializeObject(); BackgroundImageChanage();">
+    
+    <div id="main">
+        <!--TOP-->
+        <div id="top">
+            <div id="menu">
+                <!--LOGO-->
+                <img id="logo" src="images/logo.png" onclick="Reload();" />
+                <!--MENU-->
+                <ul>
+                    <li>
+                        <a href="#">Главная</a>
+                        <ul>
+                            <li><a href="#">Под меню 1</a></li>
+                            <li><a href="#">Статистика учеников</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Новости</a>
+                        <ul>
+                            <li><a href="#">Что сейчас ?</a></li>
+                            <li><a href="#">Актуальность</a></li>
+                            <li><a href="#">Событий</a></li>
+                            <li><a href="#">Праздники</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Связь</a>
+                        <ul>
+                            <li><a href="#">Написать письмо</a></li>
+                            <li><a href="#">Войти</a></li>
+                            <li><a href="#">Форум</a></li>
+                            <li><a href="#">Зарегистрироваться</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="ornament">
+                <p></p>
+            </div>
+            <!--LanguageBox-->
+            <div id="LanguageBox">
+                <ul>
+                    <li>
+                        <p id="ru" onclick="SetLang(this.id);" title="Русский" />
+                    </li>
+                    <li>
+                        <p id="kz" onclick="SetLang(this.id);" title="Казахский" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--CENTER AND CONTENT-->
+        <div id="content">
+            <div id="center">
+                <div id="imagesGroup">
+                    <a onclick="Img_Prev()" class="imgBtnSlice imgBtnLeft">&lt;</a>
+                    <a onclick="Img_Next()" class="imgBtnSlice imgBtnRight">&gt;</a>
+                    <div id="images">
+                        <ul>
+                            <li>
+                                <p id="img_0"><a></a></p>
+                            </li>
+                            <li>
+                                <p id="img_1"><a></a></p>
+                            </li>
+                            <li>
+                                <p id="img_2"><a></a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <center>
+                 <br />
+                <strong>Уважаемый посетитель!</strong>
+                <br />
+                На базе Меркенского многопрофильного колледжа имени А.Аскарова, открылась новая специальность
+                <b><q>Дошкольное воспитание и обучение</q></b> квалификация (воспитатель дошкольных организаций)
+                <br />
+                <strong>Приемная коммисия работает без выходных</strong>
+                
+                <div class="line"></div>
+
+                <div class="backContent">
+                    <p><strong>Список документов для поступления:</strong></p>
+                    <ul>
+                        <li>
+                            <p>Удостоверение личности или свидетельство о рождений (копия)</p>
+                        </li>
+                        <li>
+                            <p>Аттестат об оброзовании</p>
+                        </li>
+                        <li>
+                            <p>Медицинская справка О86-У, ф.О-63 (прививочная карта) с флюорографией</p>
+                        </li>
+                        <li>
+                            <p>Паспорт здоровья или ф.О-26 (школьная карта)</p>
+                        </li>
+                        <li>
+                            <p>6 фотографии (3*4)</p>
+                        </li>
+                        <li>
+                            <p>Характеристика с места учебы</p>
+                        </li>
+                        <li>
+                            <p>Адресная справка</p>
+                        </li>
+                        <li>
+                            <p>Справка с ИДН</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="line"></div>
+
+                <div class="backContent">
+                    <p><strong>Специальности:</strong></p>
+                    <ul>
+                        <li>
+                            <p>
+                                051802 (3) «Бухгалтерский учет и аудит» (экономист - бухгалтер)
+                                Продолжительность обучения: 9 кредитов. 2 года 10 класс, 11 класс. - 1 год 10 месяцев.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                130500 (3) «Информационные системы» (техник-программист)
+                                Продолжительность обучения: 9 кредитов. - 3 года 10 класс, 11 класс. 2 года 10 месяцев.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                051501 (3) «Менеджмент» (менеджер)
+                                Продолжительность обучения: 2 года. 10 класс, 11 класс. - 1 год 10 месяцев.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                051401 (3) «Оценка» (для каждого сектора и областей применения) (техник - оценщик)
+                                Продолжительность обучения: 2 года. 10 класс, 11 класс. - 1 год 10 месяцев.
+                            </p>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="backContent">
+                    Заочное отделение: На основании класса 11 - 2y
+                    Вы можете разделить его на наличие
+                </div>
+
+
+                </center>
+            </div>
+
+            <div id="content-down">
+            </div>
+
+
+        </div>
+        <form>
+            <p><input name="text" id="__FIND"></p>
+            <input type="submit"/>
+        </form>
+
+        <!--BOTTOM-->
+        <div id="footer">
+
+            <div id="footer-content">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Связь</a></li>
+                </ul>
+                <div id="logo-footer"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,514 @@
+﻿@font-face
+{
+    font-family: 'Poiret One';
+    src: url('../fonts/Font - Poiret One.ttf') format('truetype');
+}
+
+::selection
+{
+    background-color: rgb(255, 148, 0);
+    color: white;
+}
+
+head
+{
+}
+
+body
+{
+    min-width: 800px;
+    min-height: 300px;
+    background-image: url(../images/backgrounds/background_01.jpg);
+    background-size: cover;
+    margin: 0;
+    transition: linear 1s;
+    font-family: 'Poiret One';
+
+
+}
+
+
+/*Для логотипа*/
+#logo
+{
+    float: left;
+    user-select: none;
+    cursor: pointer;
+    color: none;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    padding-left: 2px;
+    padding-top: 2px;
+    margin-left: 7px;
+}
+
+#top-line
+{
+    background: #090909;
+    height: 16px;
+    width: 100%;
+    position: fixed;
+    margin-top: -70px;
+}
+
+#main
+{
+    margin: 0;
+}
+
+#top
+{
+    z-index: 10;
+    position: fixed;
+    margin-top: -70px;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(9, 27, 112, 0.66);
+    box-shadow: rgba(0,0,0,0.3) 0 5px 10px;
+    /* background-image: linear-gradient(-45deg, #b3dced 0%,#29b8e5 50%,#195d78 100%); */
+    /*background-image:url("../images/menu_back_panel.png");
+    background-repeat: repeat-x;*/
+}
+
+#ornament
+{
+    margin-top: -5px;
+    position: absolute;
+    left: 350px;
+    width: calc(100% - 220px);
+    height: 25px;
+}
+
+    #ornament p
+    {
+        width: inherit;
+        height: inherit;
+        background-image: url("../images/ornamnet.png");
+        background-size: 50px;
+        background-repeat: repeat-x;
+    }
+
+#menu
+{
+    position: absolute;
+}
+
+
+    #menu ul
+    {
+        margin: 0;
+        list-style: none;
+        margin-left: 25px;
+    }
+
+        #menu ul li
+        {
+            float: left;
+            height: 50px;
+        }
+
+    /*ПОД МЕНЮ*/
+    #menu li ul
+    {
+        margin: 0;
+        width: 241px;
+        position: absolute;
+        display: none;
+        background-color: rgba(0, 11, 64, 0.92);
+    }
+
+        #menu li ul li
+        {
+            height: 40px;
+            margin-left: -40px;
+            border-left: 1px solid rgba(41, 184, 229, 0.33);
+        }
+
+            #menu li ul li:first-child
+            {
+                padding-top: 0px;
+            }
+
+            #menu li ul li:last-child
+            {
+                padding-bottom: 0px;
+            }
+
+            #menu li ul li a
+            {
+                padding: 0;
+                padding-top: 12px;
+                padding-left: 10px;
+                height: 40px;
+                width: 280px;
+                text-align: left;
+                font-family: 'Poiret One';
+                font-size: 0.8em;
+            }
+
+                #menu li ul li a:hover
+                {
+                    padding-left: 20px;
+                }
+
+    /*Show*/
+    #menu li:hover ul
+    {
+        display: block;
+    }
+
+
+    #menu a
+    {
+        text-decoration: none;
+        box-sizing: border-box;
+        display: block;
+        text-anchor: middle;
+        text-align: center;
+        height: 50px;
+        padding: 12px 15px;
+        cursor: pointer;
+        font-family: Consolas;
+        color: white;
+    }
+
+        #menu a:hover
+        {
+            transition: linear 0.2s;
+            background-color: rgba(41, 184, 229, 0.33);
+            color: aqua;
+            text-shadow: 2px 2px 2px black;
+        }
+
+/*#menu a:focus
+        {
+            outline: 1px solid;
+            outline-color: rgb(41, 184, 229);
+        }*/
+
+#LanguageBox
+{
+    float: right;
+    position: absolute;
+    left: calc(100% - 100px);
+    width: 100px;
+    height: 50px;
+}
+
+    #LanguageBox ul
+    {
+        display: block;
+    }
+        /*Смещение*/
+        #LanguageBox ul li
+        {
+            list-style: none;
+            float: left;
+            padding: 2px;
+        }
+
+    #LanguageBox p
+    {
+        text-decoration: none;
+        color: #232323;
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 10px;
+        margin-top: -4px;
+    }
+
+
+.class_ru
+{
+    background-image: url('../images/langicons/russian.png');
+}
+
+.class_kz
+{
+    background-image: url('../images/langicons/kazakh.png');
+}
+
+.classLngIsOn
+{
+    outline: 2px solid rgb(255, 148, 0);
+}
+
+
+.classLngIsOff
+{
+    cursor: pointer;
+}
+
+/*CONTENT*/
+
+#topImage
+{
+    background-color: black;
+}
+
+    #topImage p
+    {
+        background: url(../images/back_tmp.jpg) no-repeat black;
+        background-position-x: center;
+        position: fixed;
+        width: 698px;
+        height: 500px;
+        z-index: -1;
+    }
+
+#content
+{
+    z-index: 3;
+    width: 700px;
+    margin: auto;
+    margin-top: 70px;
+    position: center;
+}
+
+.line
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    clear: both;
+    height: 1px;
+    background-color: silver;
+    box-shadow:rgba(82, 82, 82, 0.57) 0px 0px 6px;
+}
+
+#footer
+{
+    margin-top: 10px;
+    color: silver;
+    background: rgba(39, 39, 39, 0.46);
+    padding: 5px 0 6px 0;
+    font-family: 'Times New Roman';
+}
+
+#footer-content ul li a
+{
+    text-decoration: none;
+    color: silver;
+}
+
+#footer-content a:hover
+{
+    text-decoration: underline;
+}
+
+#footer-content a:focus
+{
+    box-sizing: border-box;
+    outline: 1px dotted;
+}
+
+#footer-content ul li
+{
+    border: none;
+    font-weight: normal;
+    display: inline;
+    padding: 0 7px;
+    border-left: 1px solid;
+    line-height: 1;
+}
+
+    #footer-content ul li:first-child
+    {
+        padding-left: 0;
+        border: none;
+    }
+
+
+#imagesGroup
+{
+    float: left;
+    width: 100%;
+    height: 180px;
+    background-color: rgb(74, 74, 74);
+}
+
+#images
+{
+    height: 150px;
+    background-color: #3d3d3d;
+}
+
+    #images ul
+    {
+    }
+
+        #images ul li
+        {
+            margin-top: 4px;
+            margin-left: -3px;
+            padding: 3px;
+            list-style: none;
+            display: inline-block;
+            float: left;
+        }
+
+    #images li p
+    {
+        transition: linear 0.3s;
+        max-width: 200px;
+        max-height: 110px;
+        width: 200px;
+        height: 100px;
+        border: 2px solid #090909;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: top;
+    }
+
+    #images a
+    {
+        height: 0px;
+        background-color: rgba(0, 0, 0, 0.3);
+        display: block;
+        text-decoration: none;
+        color: #232323;
+        visibility: hidden;
+        height: 25px;
+        margin-top: 75px;
+        border-radius: 25px 25px;
+        text-align: center;
+        font-size: 0.7em;
+    }
+
+    #images li p:hover
+    {
+        transition: linear 0.3s;
+        border: 2px groove aqua;
+        background-position-y: bottom;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 3px;
+    }
+
+        #images li p:hover a
+        {
+            visibility: visible;
+            transition: linear 0.5s;
+            color: white;
+            cursor:pointer;
+        }
+
+.imgBtnSlice
+{
+    user-select: none;
+    z-index: 0;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(35, 35, 35, 0.29);
+    margin-top: 75px;
+    padding: 2px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Poiret One';
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    transition: linear 0.2s;
+}
+
+    .imgBtnSlice:hover
+    {
+        background-color: rgb(255, 148, 0);
+        color: white;
+        border-radius: 15px 15px;
+        transition: linear 0.2s;
+    }
+
+.imgBtnLeft
+{
+    margin-left: 5px;
+}
+
+.imgBtnRight
+{
+    margin-left: 664px;
+}
+
+
+#content #center
+{
+    border: 1px solid;
+    border-color: black;
+    background-color: white;
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 10px;
+}
+
+.backContent
+{
+    margin-top: 10px;
+    width: 80%;
+    color: black;
+    display: table;
+    background-color: rgba(9, 27, 112, 0.09);
+}
+
+    .backContent ul li
+    {
+        list-style: url(../images/list_number.png);
+    }
+
+        .backContent ul li p
+        {
+            text-align: left;
+            font-size: 0.8em;
+            font-family: Consolas;
+        }
+
+            .backContent ul li p:hover
+            {
+                color: red;
+            }
+
+
+/*IMAGE VIEW -> "JS/Image View.js"*/
+#ImageView
+{
+    position:fixed;
+    top:0;
+    margin:0;
+    z-index:12;
+    margin:0;
+    width:100%;
+    height:100%;
+    background-color:#3d3d3d;
+}
+
+#ImageView button
+{
+    float:right;
+    display:block;
+    width:50px;
+    height:50px;
+    border:0;
+    font-family:Arial;
+    transition:linear 0.3s;
+    font-size:2em;
+    cursor:pointer;
+    background-color:transparent;
+    color:silver;
+}
+
+#ImageView button:hover
+{
+    color:white;
+    transition:linear 0.3s;
+}
+
+#ImageView button:focus
+{
+    border:1px white;
+}
+
+#ImageView img
+{
+    width:500px;
+    margin-left:calc(100%/2 - 250px);
+    margin-top:60px;
+}
